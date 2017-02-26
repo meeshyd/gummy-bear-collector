@@ -1,68 +1,81 @@
-// global variables
-var userScore = 0;
-var winCount = 0;
-var lossCount = 0;
-var randomComputerNum = 0;
-var randomComputerNum = 0;
-var blueRandomNum = 0;
-var pinkRandomNum = 0;
-var greenRandomNum = 0;
-var purpleRandomNum = 0;
+$(document).ready(function() {	
+	var bearButton = $("");
+	var randomComputerNum = 0;
+	var bearsObj = {
+		color: ["blue", "pink", "green", "purple"],
+		points: [],
+	};
+	var winCount = 0;
+	var lossCount = 0;
+	var userScore = 0;
 
-$(document).ready(function() {
-
-// begins game by refreshing the user's score and generating new random number for computer score and the buttons
-	function start() {
-		
-		userScore = 0;
-		$("#user-score").html(userScore);
-
-		randomComputerNum = Math.floor(Math.random() * 102) + 19;
-		blueRandomNum = Math.floor(Math.random() * 12) + 1;
-		pinkRandomNum = Math.floor(Math.random() * 12) + 1;
-		greenRandomNum = Math.floor(Math.random() * 12) + 1;
-		purpleRandomNum = Math.floor(Math.random() * 12) + 1;
-		// console.log ('computer number:'+randomComputerNum);
-		// console.log ('blue number:'+ blueRandomNum);
-		// console.log ('pink number:'+ pinkRandomNum);
-		// console.log ('green number:'+ greenRandomNum);
-		// console.log ('purple number:'+ purpleRandomNum);
-
-		$("#computer-score").html(randomComputerNum);
+	for (var i = 0; i<bearsObj.color.length; i++) {
+		bearButton = $ ("<button>");
+		$(bearButton).attr('class', 'bear-button');
+		$(bearButton).attr('id', bearsObj.color[i]+'-'+'bear-button');
+		$(bearButton).append('<img src="assets/images/' + bearsObj.color[i] + '.png"/>');
+		$(bearButton).attr('points',bearsObj.points[i]);
+		$("#bear-button-div").append(bearButton);
 	};
 
+	function start () {
+		userScore = 0;
+		$("#user-score").text(userScore);
+
+		randomComputerNum = Math.floor(Math.random() * 102) + 19;
+		$("#computer-score").text(randomComputerNum);
+
+		bearsObj.points=[];
+
+		var randomBearNum = [
+			Math.floor(Math.random() * 12) + 1,
+			Math.floor(Math.random() * 12) + 1,
+			Math.floor(Math.random() * 12) + 1,
+			Math.floor(Math.random() * 12) + 1,
+		];
+		for (var i = 0; i<bearsObj.color.length; i++) {
+			bearsObj.points.push(randomBearNum[i]);	
+		};
+
+		console.log('Computer Num: '+ randomComputerNum);
+		console.log('Bear Nums: '+ bearsObj.points);
+	};
+
+start ();
+
 //button click functions
-	// toggles game instructions when user clicks on How to Play button
+	
+// toggles game instructions when user clicks on How to Play button
 	$(".instructions-button").on("click", function() {
   		$(".instructions-text").toggle();
 	});
 	
 	$("#blue-bear-button").on("click", function() {
-		userScore += blueRandomNum;
+		var blueRandomPts = bearsObj.points[0];
+		userScore += blueRandomPts;
 		$("#user-score").html(userScore);
 		gameOver();
-		console.log(userScore);
 	});
 
 	$("#pink-bear-button").on("click", function() {
-		userScore += pinkRandomNum;
+		var pinkRandomPts = bearsObj.points[1];
+		userScore += pinkRandomPts;
 		$("#user-score").html(userScore);
 		gameOver();
-		console.log(userScore);
 	});
 
 	$("#green-bear-button").on("click", function() {
-		userScore += greenRandomNum;
+		var greenRandomPts = bearsObj.points[2];
+		userScore += greenRandomPts;
 		$("#user-score").html(userScore);
 		gameOver();
-		console.log(userScore);
 	});
 
 	$("#purple-bear-button").on("click", function() {
-		userScore += purpleRandomNum;
+		var purpleRandomPts = bearsObj.points[3];
+		userScore += purpleRandomPts;
 		$("#user-score").html(userScore);
 		gameOver();
-		console.log(userScore);
 	});
 
 //game over function	
@@ -73,16 +86,13 @@ $(document).ready(function() {
 			winCount++;
 			$("#win-count").html(winCount);
 			start();
-		}
-		else if (userScore > randomComputerNum) {
+		}else if (userScore > randomComputerNum) {
 			alert("You lose!");
 			lossCount++;
 			$("#loss-count").html(lossCount);
 			start();
 		}
-	}
-
-start ();
+	};
 
 });
 
