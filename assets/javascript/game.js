@@ -39,43 +39,63 @@ $(document).ready(function() {
 	var lossCount = 0;
 
 	function start() {
-		
+		console.log ('computer number:'+randomComputerNum);
+		console.log ('blue number:'+ blueRandomNum);
+		console.log ('pink number:'+ pinkRandomNum);
+		console.log ('green number:'+ greenRandomNum);
+		console.log ('purple number:'+ purpleRandomNum);
 
+		$('#computer-score').html(randomComputerNum);
 	}
+start();
 
 //button click functions
-	$("#button1").on("click", function() {
-		userScore += randomTreatNum;
-
+	$("#blue-bear-button").on("touchstart click", function() {
+		userScore += blueRandomNum;
+		$('#user-score').html(userScore);
+		gameOver();
 		console.log(userScore);
 	});
 
-	$("#button2").on("click", function() {
-		userScore += randomTreatNum;
-
+	$("#pink-bear-button").on("click", function() {
+		userScore += pinkRandomNum;
+		$('#user-score').html(userScore);
+		gameOver();
 		console.log(userScore);
 	});
 
-	$("#button3").on("click", function() {
-		userScore += randomTreatNum;
-
+	$("#green-bear-button").on("click", function() {
+		userScore += greenRandomNum;
+		$('#user-score').html(userScore);
+		gameOver();
 		console.log(userScore);
 	});
 
-	$("#button4").on("click", function() {
-		userScore += randomTreatNum;
-
+	$("#purple-bear-button").on("click", function() {
+		userScore += purpleRandomNum;
+		$('#user-score').html(userScore);
+		gameOver();
 		console.log(userScore);
 	});
 
 //game over function	
 	function gameOver() {
+
+		if (userScore === randomComputerNum) {
+			alert('You win!');
+			winCount++;
+			$('#win-count').html(winCount);
+			start();
+		}
+		else if (userScore > randomComputerNum) {
+			alert('You lose!');
+			lossCount++;
+			$('#loss-count').html(lossCount);
+			start();
+		}
 		
 
 	}
-
-
-
 
 
 

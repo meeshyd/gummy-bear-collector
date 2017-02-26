@@ -1,6 +1,10 @@
-h1, h2, h3 {
+h1, h2, h3, #computer-score, #user-score {
 	font-family: 'Oleo Script', cursive;
 	text-align: center;
+}
+
+h2, #computer-score, #user-score {
+	font-size: 40px;
 }
 
 h1 {
@@ -35,8 +39,11 @@ p {
 }
 .after-scallop{
   background: white;
-  padding:50px 40px;
+  padding-top: 50px;
   margin-bottom:20px;
+  width: 80%;
+  margin: 0 auto;
+
 }
 
 
@@ -49,4 +56,9 @@ p {
 button {
 	background-color: transparent;
 	border: none;
+}
+
+.gummy-bear {
+	height: 250px;
+	width: auto;
 }
