@@ -1,0 +1,52 @@
+h1, h2, h3 {
+	font-family: 'Oleo Script', cursive;
+	text-align: center;
+}
+
+h1 {
+	font-size: 70px;
+	color: white;
+	-webkit-text-stroke-width: 3px;
+	-webkit-text-stroke-color: teal;
+	text-align: center;
+}
+
+
+p {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.scallop {
+  position:relative;
+  background: #C4DCD1;
+  padding: 20px;
+}
+.scallop::after { 
+  position:absolute;
+  bottom: -30px;
+  left: 0px;
+  width: 100%;
+  content:" ";
+  background: radial-gradient(circle at 50% 0%, #C4DCD1 25%, white 26%, white 40%);
+  background-color: #C4DCD1;
+  background-size:50px 100px;
+  height: 30px;
+  background-repeat: repeat-x;
+}
+.after-scallop{
+  background: white;
+  padding:50px 40px;
+  margin-bottom:20px;
+}
+
+
+#treat-btn-box {
+	margin: 0 auto;
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+}
+button {
+	background-color: transparent;
+	border: none;
+}
