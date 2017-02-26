@@ -1,3 +1,6 @@
+body {
+	background-color: pink;
+}
 h1, h2, h3, #computer-score, #user-score {
 	font-family: 'Oleo Script', cursive;
 	text-align: center;
@@ -20,40 +23,36 @@ p {
 	font-family: 'Open Sans', sans-serif;
 }
 
-.scallop {
-  position:relative;
-  background: #C4DCD1;
-  padding: 20px;
-}
-.scallop::after { 
-  position:absolute;
-  bottom: -30px;
-  left: 0px;
-  width: 100%;
-  content:" ";
-  background: radial-gradient(circle at 50% 0%, #C4DCD1 25%, white 26%, white 40%);
-  background-color: #C4DCD1;
-  background-size:50px 100px;
-  height: 30px;
-  background-repeat: repeat-x;
-}
-.after-scallop{
-  background: white;
-  padding-top: 50px;
-  margin-bottom:20px;
-  width: 80%;
-  margin: 0 auto;
-
+#game-container {
+/*	margin-top: 100px;*/
 }
 
+#instructions-box {
+/*	width: 60%;
+	margin: 50px auto 0 auto;
+    left: 50%;
+    transform: translate(-50%, 0);*/
+}
+
+.instructions-button {
+/*	margin: 0 auto;
+	display: flex;
+	justify-content: center;*/
+}
+
+.instructions-text {
+	background-color: white;
+	display: none;
+	position: absolute;
+	z-index: 500;
+}
 
 #treat-btn-box {
-	margin: 0 auto;
-	width: 80%;
+	width: 100%;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 }
-button {
+.bear-button {
 	background-color: transparent;
 	border: none;
 }
