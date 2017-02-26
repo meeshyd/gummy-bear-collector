@@ -23,27 +23,14 @@ p {
 	font-family: 'Open Sans', sans-serif;
 }
 
-#game-container {
-/*	margin-top: 100px;*/
-}
-
-#instructions-box {
-/*	width: 60%;
-	margin: 50px auto 0 auto;
-    left: 50%;
-    transform: translate(-50%, 0);*/
-}
-
-.instructions-button {
-/*	margin: 0 auto;
-	display: flex;
-	justify-content: center;*/
-}
-
 .instructions-text {
 	background-color: white;
+	margin: 5px;
+	padding: 10px;
 	display: none;
 	position: absolute;
+	left: 25%;
+	opacity: .95;
 	z-index: 500;
 }
 
@@ -55,9 +42,10 @@ p {
 .bear-button {
 	background-color: transparent;
 	border: none;
+	outline:none
 }
 
-.gummy-bear {
-	height: 250px;
+#bear-button-div img {
+	height: 300px;
 	width: auto;
 }
