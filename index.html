@@ -6,7 +6,8 @@
 <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-<link href="https://fonts.googleapis.com/css?family=Oleo+Script|Open+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Modak|Asap|Sigmar+One" rel="stylesheet">
+<link href="assets/css/hover.css" rel="stylesheet" media="all">
 
 </head>
 <body>
@@ -22,10 +23,10 @@
 			<div class="col-md-12" id="instructions-box">
 				<div class="row">
 					<div class="col-md-12">
-						<button class="instructions-button center-block" id ="btn btn-default"><p id="how-to-play">How to Play</p></button>
+						<button id="instructions-button" class="center-block" id ="btn btn-default">How to Play</button>
 					</div>
 					<div class="col-md-12">
-						<div class="instructions-text centered">
+						<div id="instructions-text">
 							<p>You will be given a random number at the start of the game.</p>
 							<p>There are four gummy bears below. By clicking on a gummy bear, you will add a specific number of points to your score.</p>
 							<p>To win the game, match your total score to the number above the gummy bears.</p>
@@ -37,19 +38,19 @@
 		</div>
 		
 		<div class="row">
-			<div class="col-md-2 pull-left" id="win-loss-counters">	
-				<h3>Wins: <span id="win-count"></span></h3>
-				<h3>Losses: <span id="loss-count"></span></h3>
+			<div class="col-md-2 col-md-offset-1 pull-left" id="win-loss-counters">	
+				<h3>Wins: <span class="scoreTxt" id="win-count">0</span></h3>
+				<h3>Losses: <span class="scoreTxt" id="loss-count">0</span></h3>
 			</div>
-			<div class="col-md-8 pull-left" id="game-container">	
+			<div class="col-md-6 pull-left" id="game-container">	
 				<div id="computer-score-box">
 					<h2>Computer Score</h2>
-					<div id="computer-score"></div>
+					<div class="scoreTxt" id="computer-score"></div>
 				</div>
 				<div id="bear-button-div"></div>
 				<div id="user-score-box">
 					<h2>Your Score</h2>
-				<div id="user-score">0</div>
+				<div class="scoreTxt" id="user-score">0</div>
 			</div>
 			
 		</div>	

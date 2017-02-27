@@ -46,8 +46,8 @@ start ();
 //button click functions
 	
 // toggles game instructions when user clicks on How to Play button
-	$(".instructions-button").on("click", function() {
-  		$(".instructions-text").toggle();
+	$("#instructions-button").on("click", function() {
+  		$("#instructions-text").toggle();
 	});
 	
 	$("#blue-bear-button").on("click", function() {
