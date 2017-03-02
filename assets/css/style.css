@@ -2,7 +2,7 @@
 /*GENERAL*/
 body {
 	background-image: url('../images/dots.svg');
-	background-size: 3%;
+	background-size: 50px;
 	background-repeat: repeat;
 	font-family: 'Asap', sans-serif;
 	height: 100%;
@@ -28,7 +28,7 @@ h3 {
 h1 {
 	font-family: 'Modak', cursive;
 	font-size: 70px;
-	padding: 10px;
+	padding: 15px;
 	color: white;
 	text-align: center;
 	letter-spacing: 0.05em;
@@ -70,7 +70,7 @@ ul {
     border-radius: 2px;
     font-size: 14px;
     letter-spacing: 0.1em;
-    margin: 0px auto 20px auto;
+    margin: 0px auto 30px auto;
     cursor: pointer;
     display: block; 
 }
@@ -99,7 +99,7 @@ ul {
 #bear-button-div {
 	width: 100%;
 	display: flex;
-	margin: 30px 0;
+	margin: 0 0 10px 0;
 	justify-content: center;
 }
 .bear-button {
