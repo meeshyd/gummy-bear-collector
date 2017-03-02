@@ -8,8 +8,10 @@ $(document).ready(function() {
 	var winCount = 0;
 	var lossCount = 0;
 	var userScore = 0;
+	var endGameDiv = $("");
 
-//this function makes the gummy bears- creates buttons for each of the four bears inside the div #bear-button-div, assigns the class bear-button, and assigns an id for assigning a different # of points to each bear
+//this function makes the gummy bears- creates buttons for each of the four bears inside the div #bear-button-div, assigns the class bear-button, and assigns an id for assigning a different # of points to each bear	
+function gummyBearCreator () {
 	for (var i = 0; i<bearsObj.color.length; i++) {
 		bearButton = $ ("<button>");
 		$(bearButton).attr('class', 'bear-button');
@@ -17,6 +19,8 @@ $(document).ready(function() {
 		$(bearButton).append('<img src="assets/images/' + bearsObj.color[i] + '.png"/>');
 		$("#bear-button-div").append(bearButton);
 	};
+};
+gummyBearCreator();
 
 //start&reset function- sets user score to 0, generates random computer number, generates random point values for gummy bears
 	function start () {
@@ -27,6 +31,9 @@ $(document).ready(function() {
 		$("#computer-score").text(randomComputerNum);
 
 		bearsObj.points=[];
+
+		$(".bear-button").css("visibility", "");
+		endGameDiv.empty();
 
 		for (var i = 0; i<bearsObj.color.length; i++) {
 			var randomBearNum = Math.floor(Math.random() * 12) + 1;
@@ -78,15 +85,26 @@ start ();
 	function gameOver() {
 
 		if (userScore === randomComputerNum) {
-			alert("You win!");
 			winCount++;
 			$("#win-count").html(winCount);
-			start();
+			$(".bear-button").css("visibility", "hidden");
+			//display happy emoji on win
+			endGameDiv = $('<div>');
+			$(endGameDiv).append('<img src="assets/images/win.svg"/>');
+			$(endGameDiv).attr('class', 'win-lose-img');
+			$("#bear-button-div").append(endGameDiv);
+			setTimeout(start, 1500);
+		
 		}else if (userScore > randomComputerNum) {
-			alert("You lose!");
 			lossCount++;
 			$("#loss-count").html(lossCount);
-			start();
+			$(".bear-button").css("visibility", "hidden");
+			//display sad emoji on lose
+			endGameDiv = $('<div>');
+			$(endGameDiv).append('<img src="assets/images/lose.svg"/>');
+			$(endGameDiv).attr('class', 'win-lose-img');
+			$("#bear-button-div").append(endGameDiv);
+			setTimeout(start, 1500);
 		}
 	};
 

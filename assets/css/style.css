@@ -1,25 +1,24 @@
+
+/*GENERAL*/
 body {
 	background-image: url('../images/dots.svg');
 	background-size: 3%;
 	background-repeat: repeat;
 	font-family: 'Asap', sans-serif;
+	height: 100%;
 
 }
 h1, h2, h3, #computer-score, #user-score {
 	text-align: center;
 	font-family: 'Modak', cursive;
-	font-size: 40px;
-/*	font-family: 'Sigmar One', cursive;*/
 	color: #fff;
 	-webkit-text-stroke-width: 2px;
 	-webkit-text-stroke-color: #3a3a3a;
 	margin: 0; 
 }
-#win-loss-counters h3{
-	text-align: left;
-}
+
 h2, #computer-score, #user-score {
-	font-size: 30px;
+	font-size: 40px;
 }
 
 h3 {
@@ -34,9 +33,29 @@ h1 {
 	text-align: center;
 	letter-spacing: 0.05em;
 }
-p {
+p, li {
 	font-family: 'Open Sans', sans-serif;
 }
+
+li {
+	text-align: left;
+}
+ul {
+	padding-left: 30px;
+}
+
+#win-loss-counters h3{
+	text-align: left;
+}
+
+.win-lose-img {
+	position: absolute;
+	z-index: 1000;
+	top: 50;
+	left: 50;
+}
+
+/*INSTRUCTIONS BUTTON CSS START*/
 #instructions-button{
     text-decoration: none;
     background: #fc76f3;
@@ -62,7 +81,7 @@ p {
 #instructions-text {
     background-color: white;
     margin-top: 20px;
-    padding: 10px;
+    padding: 15px;
     display: none;
     position: absolute;
     min-width: 50%;
@@ -73,6 +92,9 @@ p {
     text-align: center;
     border-radius: 5px;
 }
+/*INSTRUCTIONS BUTTON CSS END*/
+
+/*GUMMY BEARS CSS START*/
 
 #bear-button-div {
 	width: 100%;
@@ -106,6 +128,33 @@ p {
 	height: 250px;
 	width: auto;
 }
-.scoreTxt{
+
+/*MEDIA QUERY CSS*/
+@media only screen and (max-width : 768px) {
+	h1 {
+		font-size: 55px;
+	}
+	#bear-button-div {
+	width: 100%;
+	display: flex;
+	margin: 15px 0;
+	}
+}
+
+@media screen and (max-width: 640px) {
+
+	#bear-button-div img {
+		height: 200px;
+		width: auto;
+	}
+	h1 {
+		font-size: 40px;
+	}
+	h2, #computer-score, #user-score {
+		font-size: 30px;
+	}
+	h3 {
+		font-size: 25px;
+	}
 
 }
