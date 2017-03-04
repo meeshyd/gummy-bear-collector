@@ -1,38 +1,54 @@
 
 /*GENERAL*/
 body {
-	background-image: url('../images/dots.svg');
-	background-size: 50px;
-	background-repeat: repeat;
-	font-family: 'Asap', sans-serif;
-	height: 100%;
-
+	background-color: white;
 }
+
 h1, h2, h3, #computer-score, #user-score {
 	text-align: center;
-	font-family: 'Modak', cursive;
-	color: #fff;
-	-webkit-text-stroke-width: 2px;
-	-webkit-text-stroke-color: #3a3a3a;
-	margin: 0; 
+	font-family: 'Nunito', cursive;
+	color: #444;
+  	margin: 0;
 }
 
-h2, #computer-score, #user-score {
-	font-size: 40px;
-}
-
-h3 {
+h2, h3, #computer-score, #user-score {
 	font-size: 30px;
 }
 
 h1 {
-	font-family: 'Modak', cursive;
-	font-size: 70px;
-	padding: 15px;
-	color: white;
-	text-align: center;
+	font-size: 50px;
 	letter-spacing: 0.05em;
+	line-height: 100px;
 }
+
+h3 {
+	text-align: left;
+}
+
+h3:first-child {
+	padding-top: 15px;
+}
+
+.header {
+	height: 100px;
+}
+
+.footer {
+	position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+}
+
+#win-loss-counters h3{
+	text-align: left;
+}
+
+#computer-score-box {
+	border-right: solid 2px #444;
+}
+
+/*INSTRUCTIONS BUTTON CSS START*/
 p, li {
 	font-family: 'Open Sans', sans-serif;
 }
@@ -40,57 +56,32 @@ p, li {
 li {
 	text-align: left;
 }
+
 ul {
 	padding-left: 30px;
 }
 
-#win-loss-counters h3{
-	text-align: left;
-}
-
-.win-lose-img {
-	position: absolute;
-	z-index: 1000;
-	top: 50;
-	left: 50;
-}
-
-/*INSTRUCTIONS BUTTON CSS START*/
-#instructions-button{
-    text-decoration: none;
-    background: #fc76f3;
-    border: none;
-    outline: none;
-    text-align: center;
-    color: #fff;
-    padding: 10px;
-    width: 150px;
-    height: 40px;
-    transition: all 0.2s ease-in;
-    border-radius: 2px;
-    font-size: 14px;
-    letter-spacing: 0.1em;
-    margin: 0px auto 30px auto;
+#button {
+    width: 40px;
+    height: auto;
     cursor: pointer;
-    display: block; 
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
-#instructions-button:hover {
-    letter-spacing: 0.3em;
-    background: #fe18c2;
-}
+
 #instructions-text {
     background-color: white;
     margin-top: 20px;
     padding: 15px;
     display: none;
     position: absolute;
-    min-width: 50%;
-    margin-left: 25%;
-    opacity: .95;
-    z-index: 500;
-    margin-right: 25%;
+    right: 0;
+    opacity: .9;
+    min-width: 300px;
     text-align: center;
     border-radius: 5px;
+    z-index: 500;
 }
 /*INSTRUCTIONS BUTTON CSS END*/
 
@@ -98,9 +89,16 @@ ul {
 
 #bear-button-div {
 	width: 100%;
+	margin: 0;
+	padding-top: 75px;
+	padding-bottom: 75px;
 	display: flex;
-	margin: 0 0 10px 0;
 	justify-content: center;
+	background-image: url('../images/stripes.svg');
+	background-repeat: repeat;
+	border-top: solid 2px #444;
+	border-bottom: solid 2px #444;
+
 }
 .bear-button {
 	background-color: transparent;
@@ -111,6 +109,8 @@ ul {
   	-webkit-transform: perspective(1px) translateZ(0);
   	transform: perspective(1px) translateZ(0);
   	box-shadow: 0 0 1px transparent;
+  	-webkit-filter: drop-shadow(3px 3px 3px #b0b0b0);
+  	filter: drop-shadow(3px 3px 3px #b0b0b0);
 }
 
 .bear-button:hover, .bear-button:focus, .bear-button:active {
@@ -125,36 +125,61 @@ ul {
 }
 
 #bear-button-div img {
-	height: 250px;
+	height: 300px;
 	width: auto;
+}
+
+.win-lose-img {
+	position: absolute;
+	top: 50;
+	left: 50;
 }
 
 /*MEDIA QUERY CSS*/
 @media only screen and (max-width : 768px) {
 	h1 {
-		font-size: 55px;
+		font-size: 35px;
 	}
-	#bear-button-div {
-	width: 100%;
-	display: flex;
-	margin: 15px 0;
+
+	h2 {
+		font-size: 30px;
+	}
+
+	#bear-button-div img {
+		height: 250px;
+		width: auto;
+	}
+
+	h3 {
+		font-size: 20px;
+	}
+
+	h3:first-child {
+		padding-top: 30px;
 	}
 }
 
 @media screen and (max-width: 640px) {
+	h1 {
+		font-size: 30px;
+	}
+
+	h2 {
+		font-size: 25px;
+	}
+	
+
+	h3 {
+		font-size: 15px;
+	}
 
 	#bear-button-div img {
 		height: 200px;
 		width: auto;
 	}
-	h1 {
-		font-size: 40px;
+	
+	#bear-button-div {
+	padding-top: 110px;
+	padding-bottom: 110px;
 	}
-	h2, #computer-score, #user-score {
-		font-size: 30px;
-	}
-	h3 {
-		font-size: 25px;
-	}
-
 }

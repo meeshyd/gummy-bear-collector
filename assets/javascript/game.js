@@ -2,7 +2,7 @@ $(document).ready(function() {
 	var bearButton = $("");
 	var randomComputerNum = 0;
 	var bearsObj = {
-		color: ["blue", "pink", "green", "purple"],
+		color: ["red", "yellow", "green", "orange"],
 		points: [],
 	};
 	var winCount = 0;
@@ -49,18 +49,18 @@ start ();
 //button click functions start here
 	
 	// toggles game instructions when user clicks on How to Play button
-	$("#instructions-button").on("click", function() {
+	$("#button").on("click", function() {
   		$("#instructions-text").toggle();
 	});
 	//bear click functions - assigns random point value with each game and updates user score when clicked, also calls game over function to compare scores on each click
-	$("#blue-bear-button").on("click", function() {
+	$("#red-bear-button").on("click", function() {
 		var blueRandomPts = bearsObj.points[0];
 		userScore += blueRandomPts;
 		$("#user-score").html(userScore);
 		gameOver();
 	});
 
-	$("#pink-bear-button").on("click", function() {
+	$("#yellow-bear-button").on("click", function() {
 		var pinkRandomPts = bearsObj.points[1];
 		userScore += pinkRandomPts;
 		$("#user-score").html(userScore);
@@ -74,7 +74,7 @@ start ();
 		gameOver();
 	});
 
-	$("#purple-bear-button").on("click", function() {
+	$("#orange-bear-button").on("click", function() {
 		var purpleRandomPts = bearsObj.points[3];
 		userScore += purpleRandomPts;
 		$("#user-score").html(userScore);
