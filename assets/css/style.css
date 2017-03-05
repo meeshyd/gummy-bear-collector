@@ -140,7 +140,7 @@ ul {
   animation-iteration-count: 1;
 }
 
-#bear-button-div img {
+.bear-button img, .win-lose-img img {
 	height: 300px;
 	width: auto;
 }
@@ -157,7 +157,7 @@ ul {
 		font-size: 30px;
 	}
 
-	#bear-button-div img {
+	.bear-button img {
 		height: 250px;
 		width: auto;
 	}
@@ -178,8 +178,8 @@ ul {
 		font-size: 15px;
 		padding: 0;
 	}
-	#bear-button-div img {
-		height: auto;
-		width: 100%;
+	.bear-button img {
+		height: 175px;
+		width: auto;
 	}
 }
