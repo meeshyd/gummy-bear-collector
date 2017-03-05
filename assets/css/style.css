@@ -188,10 +188,12 @@ ul {
 		width: 100%;
 	}
 
-	.win-lose-img img {
-		height: auto;
+	.win-lose-img {
 		width: 100%;
-		top: 0;
-		left: 0;
+
+	}
+	.win-lose-img img{
+		width: 100%;
+		height: auto;
 	}
 }
