@@ -154,7 +154,7 @@ ul {
 /*/*MEDIA QUERY CSS*/
 @media only screen and (max-width : 768px) {
 	h1 {
-		font-size: 35px;
+		font-size: 30px;
 	}
 
 	#bear-button-div img {
@@ -166,7 +166,7 @@ ul {
 @media screen and (max-width: 640px) {
 	
 	h1 {
-		font-size: 25px;
+		font-size: 20px;
 	}
 
 	h2, #computer-score, #user-score {
@@ -178,7 +178,7 @@ ul {
 		padding: 0;
 	}
 	#bear-button-div img {
-		height: 200px;
+		height: 175px;
 		width: auto;
 	}
 }
