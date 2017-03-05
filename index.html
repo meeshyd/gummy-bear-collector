@@ -5,61 +5,81 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans|Nunito:900&effect=shadow-multiple" rel="stylesheet">
 <link href="assets/css/hover.css" rel="stylesheet" media="all">
 
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="assets/javascript/game.js"></script>
 </head>
 <body>
 	<div class="container-fluid">
 		
+
+
 		<div class="row header">
-			<div class="col-xs-12 col-sm-2" id="win-loss-counters">	
-				<h3>Wins: <span class="scoreTxt" id="win-count">0</span></h3>
-				<h3>Losses: <span class="scoreTxt" id="loss-count">0</span></h3>
-			</div>
-			<div class="col-xs-12 col-sm-8">
-				<h1 class="font-effect-shadow-multiple">Gummy Bear Collector</h1>
-			</div>
-			<div class="col-xs-2" id="instructions-box">
-					<div class="row">
-						<div class="col-xs-12">
-							<img src="assets/images/info-icon.png" id="button">
-						</div>
-						<div class="col-xs-12">
-							<div id="instructions-text">
-								<p>Collect the perfect amount of gummy bears!</p>
-								<ul style="" class="">
-									<li>You will be given a random Gummy Bear Score at the start of the game.</li>
-									<li>Above the scores are four gummy bears. By clicking on a gummy bear, you will add a specific number of points to your score.</li>
-									<li>To win the game, match your score to the Gummy Bear Score.</li>
-									<li>Each time the game starts, the game will change the values of the gummy bears and the Gummy Bear Score.</li>
-								</ul>
-							</div>
-						</div>
+			<div class="col-xs-2">
+				<div class="row">
+					<div class="col-xs-12">	
+						<h3>W : <span class="scoreTxt" id="win-count">0</span></h3>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">	
+						<h3>L : <span class="scoreTxt" id="loss-count">0</span></h3>
 					</div>
 				</div>
 			</div>
-		
+			<div class="col-xs-8">
+				<h1 class="font-effect-shadow-multiple">Gummy Bear Collector</h1>
+			</div>
+			<div class="col-xs-2" id="instructions-box">
+				<img src="assets/images/info-icon.png" id="button">
+				<div id="instructions-text">
+					<p>Collect the perfect amount of gummy bears!</p>
+					<ul style="" class="">
+						<li>You will be given a random Gummy Bear Score at the start of the game.</li>
+						<li>Above the scores are four gummy bears. By clicking on a gummy bear, you will add a specific number of points to your score.</li>
+						<li>To win the game, match your score to the Gummy Bear Score.</li>
+						<li>Each time the game starts, the game will change the values of the gummy bears and the Gummy Bear Score.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
 		<div class="row">
 			<div id="bear-button-div" class="col-xs-12"></div>
 		</div>
 
-		<div class="row footer">
+		<div class="row" id="score-div">
 			<div class="col-xs-6" id="computer-score-box">	
-				<h2>Gummy Bear Score</h2>
-				<div class="scoreTxt" id="computer-score"></div>
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Gummy Score</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="scoreTxt" id="computer-score"></div>
+					</div>
+				</div>
 			</div>
 			<div id="user-score-box" class="col-xs-6">
-				<h2>Your Score</h2>
-				<div class="scoreTxt" id="user-score">0</div>
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Your Score</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="scoreTxt" id="user-score">0</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>
