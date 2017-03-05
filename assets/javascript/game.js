@@ -1,5 +1,5 @@
 $(document).ready(function() {	
-	var bearButton = $("");
+	var $bearButton;
 	var randomComputerNum = 0;
 	var bearsObj = {
 		color: ["red", "yellow", "green", "orange"],
@@ -13,11 +13,11 @@ $(document).ready(function() {
 //this function makes the gummy bears- creates buttons for each of the four bears inside the div #bear-button-div, assigns the class bear-button, and assigns an id for assigning a different # of points to each bear	
 function gummyBearCreator () {
 	for (var i = 0; i<bearsObj.color.length; i++) {
-		bearButton = $ ("<button>");
-		$(bearButton).attr('class', 'bear-button');
-		$(bearButton).attr('id', bearsObj.color[i]+'-'+'bear-button');
-		$(bearButton).append('<img src="assets/images/' + bearsObj.color[i] + '.png"/>');
-		$("#bear-button-div").append(bearButton);
+		$bearButton = $ ("<button>");
+		$bearButton.attr('class', 'bear-button');
+		$bearButton.attr('id', bearsObj.color[i]+'-'+'bear-button');
+		$bearButton.append('<img src="assets/images/' + bearsObj.color[i] + '.png"/>');
+		$("#bear-button-div").append($bearButton);
 	};
 };
 gummyBearCreator();
@@ -49,8 +49,8 @@ start ();
 //button click functions start here
 	
 	// toggles game instructions when user clicks on How to Play button
-	$("#button").on("click", function() {
-  		$("#instructions-text").toggle();
+	$("#instructions-btn").on("click", function() {
+  		$("#instructions-text").slideToggle();
 	});
 	//bear click functions - assigns random point value with each game and updates user score when clicked, also calls game over function to compare scores on each click
 	$("#red-bear-button").on("click", function() {
