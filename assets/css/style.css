@@ -179,7 +179,7 @@ ul {
 		padding: 0;
 	}
 	#bear-button-div img {
-		height: 175px;
-		width: auto;
+		height: auto;
+		width: 100%;
 	}
 }
