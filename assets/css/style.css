@@ -87,10 +87,8 @@ ul {
     position: absolute;
     top:10px;
     right: 10px;
-/*    transition: all 0.2s ease;
- 	-webkit-filter: drop-shadow(0px 0px 0px rgba(200,200,200,0.4));
-  	filter: drop-shadow(0px 0px 0px rgba(200,200,200,0.4));*/
 }
+
 #instructions-btn:hover{
 	-webkit-filter: drop-shadow(5px 1px 1px rgba(200,200,200,0.4));
   	filter: drop-shadow(5px 1px 1px rgba(200,200,200,0.4));
@@ -113,7 +111,7 @@ ul {
 }
 /*INSTRUCTIONS BUTTON CSS END*/
 
-/*GUMMY BEARS CSS START*/
+/*GUMMY BEARS & END GAME EMOJI CSS START*/
 
 #bear-button-div {
 	display: flex;
@@ -189,10 +187,12 @@ ul {
 	}
 
 	.win-lose-img {
+		top: 0;
+		left: 0;
 		width: 100%;
-
 	}
-	.win-lose-img img{
+
+	.win-lose-img img {
 		width: 100%;
 		height: auto;
 	}
